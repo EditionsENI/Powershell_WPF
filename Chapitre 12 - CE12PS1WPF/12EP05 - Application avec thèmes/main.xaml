@@ -1,0 +1,86 @@
+<Window 
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                      Title="Application avec icônes"
+                      Height="200"
+                      Width="650"
+                      WindowStartupLocation="CenterScreen" 
+                      BorderBrush="Blue" 
+                      BorderThickness="1"
+                      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+                      TextElement.FontWeight="Regular"
+                      TextElement.FontSize="13"
+                      TextOptions.TextFormattingMode="Ideal"
+                      TextOptions.TextRenderingMode="Auto"
+                      Background="{DynamicResource MaterialDesignPaper}"
+                      FontFamily="{DynamicResource MaterialDesignFont}"
+                      ResizeMode="CanResize">
+
+<Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+
+ <Grid>
+    <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal"  Margin="16,16,16,0">
+                    <StackPanel Orientation="Horizontal"  Margin="16">
+                    <materialDesign:PackIcon Kind="Account" Width="25" Height="25" Margin="0,0,5,0" />
+                    <TextBox Name="NameTextBox" materialDesign:HintAssist.Hint="Name" Width="150"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"  Margin="16">
+                        <materialDesign:PackIcon Kind="TextboxPassword"  Width="25" Height="25" Margin="16,0,5,0" />
+                        <PasswordBox Name="PasswordBox" materialDesign:HintAssist.Hint="Password" Width="150" /> 
+                    </StackPanel>
+                <StackPanel Orientation="Horizontal"  Margin="16">
+                    <materialDesign:PackIcon Kind="Database"  Width="25" Height="25" Margin="16,0,5,0" />
+                    <ComboBox materialDesign:HintAssist.Hint="Livres">
+                        <ComboBoxItem>
+                        PowerShell
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                        XAML
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                        WPF
+                        </ComboBoxItem>
+                        </ComboBox>
+                </StackPanel>
+            </StackPanel>
+
+        <StackPanel Orientation="Horizontal"  Margin="16,16,16,16">
+            <Button
+                Margin="5"
+                Style="{StaticResource MaterialDesignRaisedLightButton}"
+                Width="140">
+                Ok
+            </Button>
+            <Button
+            Margin="5"
+                Style="{StaticResource MaterialDesignRaisedButton}"
+                Width="140">
+                Annuler
+            </Button>
+            <Button
+            Margin="5"
+                Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                Width="140">
+                Ignorer
+            </Button>
+            <Button
+                Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                Width="140">
+                Recommencer
+            </Button>
+        </StackPanel>
+    </StackPanel>    
+</Grid>
+</Window>

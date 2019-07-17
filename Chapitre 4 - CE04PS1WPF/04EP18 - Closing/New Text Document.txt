@@ -1,0 +1,4 @@
+$Users_Window.Add_Closing({
+	$_.Cancel = $true
+	[MahApps.Metro.Controls.Dialogs.DialogManager]::ShowMessageAsync($Users_Window, "Oops :-(", "To close the window click out of the window !!!")					
+})

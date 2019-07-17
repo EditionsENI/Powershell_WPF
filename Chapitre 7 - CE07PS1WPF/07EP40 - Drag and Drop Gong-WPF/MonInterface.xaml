@@ -1,0 +1,177 @@
+<Controls:MetroWindow 
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:dd="urn:gong-wpf-dragdrop"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:viewModels="clr-namespace:Showcase.WPF.DragDrop.ViewModels"
+ xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+Title="Chapitre 7 - Drag and Drop Gong-wpf-DragDrop"
+BorderBrush="DodgerBlue"
+Height="450" 
+Width="910" 
+WindowStartupLocation="CenterScreen"
+WindowStyle="None"
+BorderThickness="1" 		
+GlowBrush="{DynamicResource AccentColorBrush}">
+
+<Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Cobalt.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedTabControl.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml" />
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+</Window.Resources>	
+
+	<Grid>
+		<StackPanel Orientation="Horizontal">
+		<StackPanel Orientation="Vertical">
+		<TextBlock  Text="Button Partie 1 " Margin="15 10 0 0 " FontWeight="Bold"/>
+		 <ListBox                        Height="Auto" 
+		                                 x:Name="Button"
+		                                 HorizontalAlignment="Left"
+                                     dd:DragDrop.IsDragSource="True"
+                                     dd:DragDrop.IsDropTarget="True"
+                                     dd:DragDrop.UseDefaultDragAdorner="False"
+                                     dd:DragDrop.UseDefaultEffectDataTemplate="False"
+                                     ItemContainerStyle="{x:Null}"
+                                     SelectionMode="Extended">
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <StackPanel Margin="5" Orientation="vertical" />
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                                <Button 
+                                          Width="120"
+                                          Height="60"
+                                          Content="Hello"
+                                          Margin="5 5 5 5"
+                                          Background="#FFFFD700"/>
+                                <Button 
+                                          Width="120"
+                                          Height="60"
+                                          Content="#WPF"
+                                          Margin="5 5 5 5"
+                                          Background="#FF6495ED"/>
+                                <Button 
+                                          Width="120"
+                                          Height="60"
+                                          Content="#XAML"
+                                          Margin="5 5 5 5" 
+                                          Background="#FF56C89B"
+                                          />
+                                 <Button 
+                                          Width="120"
+                                          Height="60"
+                                          Content="#WPF.DragDrop"
+                                          Margin="5 5 5 5"
+                                          Background="#FFC99CD8"/>
+    </ListBox>
+                          <TextBlock  Text="Customization" Margin="15 0 0 0 " FontWeight="Bold"/>
+                          <CheckBox Margin="10 5"
+                                      Content="UseDefaultEffectDataTemplate"
+                                      IsChecked="{Binding ElementName=Button, Path=(dd:DragDrop.UseDefaultEffectDataTemplate), Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                          <CheckBox Margin="10 5"
+                                      Content="UseDefaultDragAdorner"
+                                      IsChecked="{Binding ElementName=Button, Path=(dd:DragDrop.UseDefaultDragAdorner), Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+    </StackPanel>
+     <StackPanel Margin="10 10 0 0">
+                            <TextBlock Text="Glisser déposer les Items de la ListBox de gauche vers la ListBox de droite.." FontWeight="Bold" Margin="0 0 0 5"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="270" />
+                                    <ColumnDefinition Width="270" />
+                                </Grid.ColumnDefinitions>
+                                <ListBox x:Name="LeftUnboundListBox"  
+                                         Width="250"
+                                         Grid.Column="0" BorderThickness="2"
+                                         dd:DragDrop.IsDragSource="True"
+                                         dd:DragDrop.IsDropTarget="True"
+                                         dd:DragDrop.UseDefaultEffectDataTemplate="True" SelectionMode="Multiple">
+                                    <ListBoxItem>Item1</ListBoxItem>
+                                    <ListBoxItem>Item2</ListBoxItem>
+                                    <ListBoxItem>Item3</ListBoxItem>
+                                    <ListBoxItem>Item4</ListBoxItem>
+                                    <ListBoxItem>Item5</ListBoxItem>
+                                </ListBox>
+                                <ListBox Grid.Column="1"
+                                         BorderThickness="2"
+                                         Width="250"
+                                         dd:DragDrop.IsDragSource="True"
+                                         dd:DragDrop.IsDropTarget="True">
+                                    <ListBoxItem>Item6</ListBoxItem>
+                                    <ListBoxItem>Item7</ListBoxItem>
+                                    <ListBoxItem>Item8</ListBoxItem>
+                                    <ListBoxItem>Item9</ListBoxItem>
+                                    <ListBoxItem>Item10</ListBoxItem>
+                                </ListBox>
+                            </Grid>
+
+                            <TextBlock  Text="Option pour la  ListBox de gauche " Margin="10 10 0 0 " FontWeight="Bold"/>
+                            <CheckBox Margin="10 5"
+                                      Content="IsDragSource"
+                                      IsChecked="{Binding ElementName=LeftUnboundListBox, Path=(dd:DragDrop.IsDragSource), Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            <CheckBox Margin="10 5"
+                                      Content="IsDropTarget"
+                                      IsChecked="{Binding ElementName=LeftUnboundListBox, Path=(dd:DragDrop.IsDropTarget), Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            <CheckBox Margin="10 5"
+                                      Content="UseDefaultDragAdorner"
+                                      IsChecked="{Binding ElementName=LeftUnboundListBox, Path=(dd:DragDrop.UseDefaultDragAdorner), Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                            <CheckBox Margin="10 5"
+                                      Content="UseDefaultEffectDataTemplate"
+                                      IsChecked="{Binding ElementName=LeftUnboundListBox, Path=(dd:DragDrop.UseDefaultEffectDataTemplate), Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </StackPanel>
+    <StackPanel Orientation="Vertical">
+    <TextBlock  Text="Button Partie 2 " Margin="15 10 0 0 " FontWeight="Bold"/>
+     <ListBox                        Height="Auto"          
+                                     Margin="0 0 0 0"
+		                                 x:Name="Button2"
+		                                 HorizontalAlignment="Left"
+                                     dd:DragDrop.IsDragSource="True"
+                                     dd:DragDrop.IsDropTarget="True"
+                                     dd:DragDrop.UseDefaultDragAdorner="False"
+                                     dd:DragDrop.UseDefaultEffectDataTemplate="False"
+                                     ItemContainerStyle="{x:Null}"
+                                     SelectionMode="Extended">
+                                <ListBox.ItemsPanel >
+                                    <ItemsPanelTemplate>
+                                        <StackPanel Margin="5" Orientation="vertical"  />
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                                <Button 
+                                          Width="120"
+                                          Height="60"
+                                          Content="PowerShell"
+                                          Margin="5 5 5 5"
+                                          Background="#FFFFD700"/>
+                                <Button 
+                                          Width="120"
+                                          Height="60"
+                                          Content="@JM2K69"
+                                          Margin="5 5 5 5"
+                                          Background="#FF6495ED"/>
+                                <Button 
+                                          Width="120"
+                                          Height="60"
+                                          Content="@syst_and_deploy"
+                                          Margin="5 5 5 5" 
+                                          Background="#FF56C89B"
+                                          />
+                                 <Button 
+                                          Width="120"
+                                          Height="60"
+                                          Content="#WPF.DragDrop"
+                                          Margin="5 5 5 5"
+                                          Background="#FFC99CD8"/>
+    </ListBox>
+    </StackPanel>
+</StackPanel>
+
+	</Grid>
+</Controls:MetroWindow>

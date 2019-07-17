@@ -1,0 +1,64 @@
+<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"		
+        Title="Chapitre 6 - DockPanel" 
+        Width="620" 
+        Height="500"  
+		ResizeMode="CanResize"	
+		>
+
+
+<Grid>
+		<DockPanel>
+		    <Grid DockPanel.Dock="Left" Background="DodgerBlue" >
+				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+					<Label Content="Informations" Foreground="White" FontWeight="Bold" FontSize="20">
+					<Label.LayoutTransform>
+						<TransformGroup>
+							<RotateTransform Angle="90" />
+							<ScaleTransform ScaleX="-1" ScaleY="-1"/>
+						</TransformGroup>
+					  </Label.LayoutTransform>
+					  </Label>
+				</StackPanel>						
+			</Grid>				
+		<Grid DockPanel.Dock="Top" Background="SlateBlue">
+				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+					<Label Content="Notre titre" Foreground="White" FontWeight="Bold" FontSize="20"/>
+				</StackPanel>						
+			</Grid>
+			<Grid DockPanel.Dock="Bottom" Background="Tomato"  >
+				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+					<Label Content="Informations copyright" Foreground="White" FontWeight="Bold" FontSize="20"/>
+				</StackPanel>						
+			</Grid>	
+      <Grid Background="#FFE0E0E0" >
+				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+					<Label Content="Vos autres controls" Foreground="White" FontWeight="Bold" FontSize="20" Width="500"/>
+				</StackPanel>						
+			</Grid>	
+			<Grid DockPanel.Dock="Left" Background="#FF61AA5A" >
+				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+					<Label Content="Logo" Foreground="White" FontWeight="Bold" FontSize="20">
+					<Label.LayoutTransform>
+						<TransformGroup>
+							<RotateTransform Angle="-90" />
+							<ScaleTransform ScaleX="-1" ScaleY="-1"/>
+						</TransformGroup>
+					  </Label.LayoutTransform>
+					  </Label>
+				</StackPanel>						
+			</Grid>				
+		</DockPanel>
+	</Grid>
+
+
+</Window>     
+
+
+   
+   
+    
+    
+    

@@ -1,0 +1,26 @@
+<Models version="">
+	<Model>
+		<Manufacturer>LENOVO</Manufacturer>		
+		<Name>20EQS01F00</Name>		
+	</Model>
+	
+	<Model>
+		<Manufacturer>LENOVO</Manufacturer>		
+		<Name>2742</Name>		
+	</Model>
+
+	<Model>
+		<Manufacturer>Dell</Manufacturer>	
+		<Name>Latitude 7480</Name>		
+	</Model>
+
+	<Model>
+		<Manufacturer>LENOVO</Manufacturer>		
+		<Name></Name>		
+	</Model>
+
+	<Model>
+		<Manufacturer>LENOVO</Manufacturer>		
+		<Name></Name>		
+	</Model>	
+</Models>

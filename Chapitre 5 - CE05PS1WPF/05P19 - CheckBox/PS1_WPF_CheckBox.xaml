@@ -1,0 +1,22 @@
+<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"		
+        Title="Chapitre 5 - CheckBox" 
+        Width="320" 
+        Height="280"  
+		BorderBrush="DodgerBlue"
+		>
+
+    <Grid>		
+<StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+   <Label FontWeight="Bold">Options</Label>
+		<CheckBox Name="MyCheckBox1">Activer Options Avancées</CheckBox>
+		<CheckBox  Name="MyCheckBox2" IsChecked="True">Activer Options de Debug</CheckBox>
+		<CheckBox Name="MyCheckBox3" >Activer les Logs</CheckBox>
+    
+</StackPanel>
+
+    </Grid>
+</Window>        

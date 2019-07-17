@@ -1,0 +1,43 @@
+<Controls:MetroWindow 
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"		
+xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" 
+Title="Chapitre 10 - MahApps Icons" 
+Width="350" Height="200" ResizeMode="CanResize"
+BorderBrush="RoyalBlue" BorderThickness="1">
+
+<Window.Resources>
+	<ResourceDictionary>
+		<ResourceDictionary.MergedDictionaries>
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Cobalt.xaml"/>
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml"/>
+		</ResourceDictionary.MergedDictionaries>
+	</ResourceDictionary>
+</Window.Resources>
+
+<Grid>
+<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+<Button>
+<iconPacks:PackIconMaterial Kind="Monitor" 
+Width="45" Height="45" 
+Foreground="Red"
+Spin="True"
+SpinDuration="3"/>
+</Button>
+
+</StackPanel>	
+	
+</Grid>
+</Controls:MetroWindow>        
+
+
+   
+   
+    
+    
+    

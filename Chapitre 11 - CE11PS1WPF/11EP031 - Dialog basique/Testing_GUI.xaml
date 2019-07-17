@@ -1,0 +1,31 @@
+﻿<Controls:MetroWindow 
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"		
+xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" 
+Title="Chapitre 11 - Dialog simple" 
+Width="400" Height="300" ResizeMode="NoResize"
+BorderBrush="RoyalBlue" BorderThickness="1">
+		
+		
+<Window.Resources>
+	<ResourceDictionary>
+		<ResourceDictionary.MergedDictionaries>
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Cobalt.xaml"/>
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+		</ResourceDictionary.MergedDictionaries>
+	</ResourceDictionary>
+</Window.Resources>		
+
+		
+		
+    <Grid Background="white">       
+        <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center">
+			<Button Name="Cliquez" Height="23" Width="100" Content="Cliquez"/>
+        </StackPanel>        
+    </Grid>
+</Controls:MetroWindow>        

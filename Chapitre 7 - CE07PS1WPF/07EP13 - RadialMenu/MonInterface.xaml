@@ -1,0 +1,127 @@
+<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"	
+        xmlns:RadialMenu="clr-namespace:RadialMenu.Controls;assembly=RadialMenu" 
+        xmlns:Converters="clr-namespace:RadialMenuDemo.Utils"        
+		Title="RadialMenu WPF PS1" 
+        Width="400" 
+        Height="400"  
+		ResizeMode="CanResize"	
+		>
+
+    <Window.Resources>
+        <ResourceDictionary Source="resources/Icons.xaml"/>
+    </Window.Resources>
+
+       <Grid>
+			<RadialMenu:RadialMenu Name="MonPremierMenu" IsOpen="true">
+
+				<RadialMenu:RadialMenu.Resources>
+					<Style  TargetType="RadialMenu:RadialMenuCentralItem">	
+						<!-- Fond bouton central --> 	
+						<Setter Property="Background" Value="AliceBlue"/>  
+						<!-- Bordures bouton central --> 
+						<Setter Property="BorderBrush" Value="DodgerBlue"/> 
+						<Setter Property="BorderThickness" Value="4"/>
+						<Setter Property="Width" Value="64"/>
+						<Setter Property="Height" Value="64"/>
+					</Style>
+
+					<Style  TargetType="RadialMenu:RadialMenuItem" >
+						<!-- Fond intérieur du menu --> 
+						<Setter Property="Background" Value="AliceBlue"/> 
+						<Setter Property="Padding" Value="2"/>
+						<Setter Property="InnerRadius" Value="40"/>
+						<Setter Property="OuterRadius" Value="150"/>
+						<Setter Property="ContentRadius" Value="85"/>
+						
+						<!-- Couleur des bordures du cercle --> 
+						<Setter Property="EdgeBackground" Value="DodgerBlue"/> 
+						<Setter Property="EdgePadding" Value="7"/>
+						<Setter Property="EdgeInnerRadius" Value="130"/>
+						<Setter Property="EdgeOuterRadius" Value="145"/>
+						
+						<!-- Couleur des flèches --> 
+						<Setter Property="ArrowBackground" Value="white"/> 
+						<Setter Property="ArrowRadius" Value="138"/>
+					</Style>									
+				</RadialMenu:RadialMenu.Resources>		
+
+				<RadialMenu:RadialMenu.CentralItem>
+					<RadialMenu:RadialMenuCentralItem Name="Close">
+						<Rectangle Width="25" Height="25">
+							<Rectangle.Fill>
+								<VisualBrush Visual="{StaticResource appbar_close}"/>
+							</Rectangle.Fill>
+						</Rectangle>
+					</RadialMenu:RadialMenuCentralItem>
+				</RadialMenu:RadialMenu.CentralItem>
+				
+				<RadialMenu:RadialMenuItem Name="Partie1">
+				<WrapPanel Orientation="Vertical">
+				<Rectangle Width="25" Height="25">
+				<Rectangle.Fill>
+				<VisualBrush Visual="{StaticResource appbar_user}"/>
+				</Rectangle.Fill>
+				</Rectangle>
+				<TextBlock FontSize="14" TextAlignment="Center">
+				Utilisateur
+				</TextBlock>
+				</WrapPanel>
+				</RadialMenu:RadialMenuItem>	
+
+				<RadialMenu:RadialMenuItem Name="Partie2">
+				<WrapPanel Orientation="Vertical">
+				<Rectangle Width="25" Height="25">
+				<Rectangle.Fill>
+				<VisualBrush Visual="{StaticResource appbar_monitor}"/>
+				</Rectangle.Fill>
+				</Rectangle>
+				<TextBlock FontSize="14" TextAlignment="Center">
+				Machine
+				</TextBlock>
+				</WrapPanel>
+				</RadialMenu:RadialMenuItem>	
+
+				<RadialMenu:RadialMenuItem Name="Partie3">
+				<WrapPanel Orientation="Vertical">
+				<Rectangle Width="25" Height="25">
+				<Rectangle.Fill>
+				<VisualBrush Visual="{StaticResource appbar_cog}"/>
+				</Rectangle.Fill>
+				</Rectangle>
+				<TextBlock FontSize="14" TextAlignment="Center">
+				Options
+				</TextBlock>
+				</WrapPanel>
+				</RadialMenu:RadialMenuItem>	
+
+				<RadialMenu:RadialMenuItem Name="Partie4">
+				<WrapPanel Orientation="Vertical">
+				<Rectangle Width="25" Height="25">
+				<Rectangle.Fill>
+				<VisualBrush Visual="{StaticResource appbar_email}"/>
+				</Rectangle.Fill>
+				</Rectangle>
+				<TextBlock FontSize="14" TextAlignment="Center">
+				Mail
+				</TextBlock>
+				</WrapPanel>
+				</RadialMenu:RadialMenuItem>
+					
+			</RadialMenu:RadialMenu>
+
+
+			<Button Name="BoutonOuvrir" Content="Open again" Height="23" Width="80"/>
+
+
+        </Grid>
+</Window>     
+
+
+   
+   
+    
+    
+    

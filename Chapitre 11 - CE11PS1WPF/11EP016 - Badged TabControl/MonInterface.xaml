@@ -1,0 +1,117 @@
+<Controls:MetroWindow 
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"		
+xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" 
+Title="Chapitre 11 - Badged Control" 
+Width="350" Height="200" ResizeMode="NoResize"
+BorderBrush="RoyalBlue" BorderThickness="1">
+
+<Window.Resources>
+	<ResourceDictionary>
+		<ResourceDictionary.MergedDictionaries>
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Cobalt.xaml"/>
+			<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml"/>
+		</ResourceDictionary.MergedDictionaries>
+	</ResourceDictionary>
+</Window.Resources>
+
+<Controls:MetroWindow.LeftWindowCommands>
+	<Controls:WindowCommands>
+	   <Button x:Name="MonBouton">
+			<iconPacks:PackIconMaterial Kind="Monitor"/>
+		</Button>	
+	</Controls:WindowCommands>	
+</Controls:MetroWindow.LeftWindowCommands>		
+
+
+<Controls:MetroWindow.RightWindowCommands>
+	<Controls:WindowCommands>
+	   <Button x:Name="MonBouton2">
+			<iconPacks:PackIconMaterial Kind="Settings"/>
+		</Button>	
+	</Controls:WindowCommands>	
+</Controls:MetroWindow.RightWindowCommands>	
+
+
+<Grid>
+<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+<TabControl >	
+<TabControl.Resources>				
+	<Style TargetType="Controls:Badged" BasedOn="{StaticResource {x:Type Controls:Badged}}">
+		<Setter Property="Margin" Value="0,10,5,0" />
+	</Style>
+</TabControl.Resources>				
+
+<TabItem>						
+	 <TabItem.Header>
+		<Controls:Badged Name="TabItem1" Badge="4" BadgeBackground="Green">
+			<TextBlock Text="Partie 1" 
+			Foreground="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:ContentControlEx}}, Path=(TextElement.Foreground)}"
+			FontSize="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:ContentControlEx}}, Path=(TextElement.FontSize)}"
+			/>
+		</Controls:Badged>
+	</TabItem.Header>	
+</TabItem>
+
+<TabItem>						
+	 <TabItem.Header>
+		<Controls:Badged Name="TabItem2" Badge="6" BadgeBackground="Red">
+			<TextBlock Text="Partie 2" 
+			Foreground="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:ContentControlEx}}, Path=(TextElement.Foreground)}"
+			FontSize="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:ContentControlEx}}, Path=(TextElement.FontSize)}"
+			/>
+		</Controls:Badged>
+	</TabItem.Header>	
+</TabItem>	
+</TabControl>
+
+
+
+
+
+
+
+<!-- <TabControl>	 -->
+	<!-- <TabItem>						 -->
+		 <!-- <TabItem.Header> -->
+		<!-- <TextBlock Text="Partie 1"  -->
+		<!-- Foreground="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:ContentControlEx}}, Path=(TextElement.Foreground)}" -->
+		<!-- FontSize="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:ContentControlEx}}, Path=(TextElement.FontSize)}" -->
+		<!-- /> -->
+		<!-- </TabItem.Header>	 -->
+	<!-- </TabItem> -->
+	
+	<!-- <TabItem>						 -->
+	 <!-- <TabItem.Header> -->
+			<!-- <TextBlock Text="Partie 2"  -->
+			<!-- Foreground="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:ContentControlEx}}, Path=(TextElement.Foreground)}" -->
+			<!-- FontSize="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Controls:ContentControlEx}}, Path=(TextElement.FontSize)}" -->
+			<!-- /> -->
+	<!-- </TabItem.Header>	 -->
+	<!-- </TabItem>	 -->
+<!-- </TabControl> -->
+
+
+
+
+
+
+
+
+</StackPanel>
+
+</Grid>
+</Controls:MetroWindow>        
+
+
+   
+   
+    
+    
+    

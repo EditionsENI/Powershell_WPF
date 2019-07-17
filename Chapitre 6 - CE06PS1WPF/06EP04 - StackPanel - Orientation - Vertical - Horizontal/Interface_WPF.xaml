@@ -1,0 +1,56 @@
+<Window 
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+Title="Interface WPF" 
+Width="600" Height="270"
+>
+
+    <Grid>	
+	<StackPanel HorizontalAlignment="Center">
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+			<Label Content="StackPanel Orientation" Margin="0,0,0,0" FontSize="20"/>		
+		</StackPanel>
+
+		<StackPanel Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Center">
+			<StackPanel Orientation="Vertical">
+				<GroupBox Header="CheckBox options" Margin="0,0,0,0" Height="65" Width="300">
+					<StackPanel Orientation="Horizontal" Margin="0,0,0,0" HorizontalAlignment="Center">
+						<CheckBox Content="Choix 1" Margin="0,0,0,0" Width="70" Height="19"></CheckBox>
+						<CheckBox Content="Choix 2" Margin="4,0,0,0" Width="70" Height="19"></CheckBox>
+						<CheckBox Content="Choix 3" Margin="4,0,0,0" Width="70" Height="19"></CheckBox>
+					</StackPanel>				
+				</GroupBox>
+
+				<GroupBox Header="RadioButton options" Margin="0,5,0,0" Height="65" Width="300">
+					<StackPanel Orientation="Horizontal" Margin="0,0,0,0" HorizontalAlignment="Center">
+						<RadioButton Content="Choix 1" Margin="0,0,0,0" Width="70" Height="19"></RadioButton>
+						<RadioButton Content="Choix 2" Margin="4,0,0,0" Width="70" Height="19"></RadioButton>
+						<RadioButton Content="Choix 3" Margin="4,0,0,0" Width="70" Height="19"></RadioButton>
+					</StackPanel>				
+				</GroupBox>
+			</StackPanel>
+
+			<StackPanel Orientation="Vertical" Margin="10,0,0,0">
+				<Grid Background="CornFlowerBlue" Height="135">
+					<DataGrid SelectionMode="Single" Width="250" Name="DataGrid_XML"  ItemsSource="{Binding}"  Margin="1,1,1,1" >
+					<DataGrid.Columns>
+					<DataGridTextColumn Header="Prenom" Binding="{Binding Label}"/>
+					<DataGridTextColumn Header="Nom" Binding="{Binding Path}"/>
+					</DataGrid.Columns>
+					</DataGrid>
+				</Grid>			
+			</StackPanel>
+		</StackPanel>
+
+		<StackPanel Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Center">
+			<Button Content="Button" Margin="0,5,0,0" Width="560"/>		
+		</StackPanel>
+	</StackPanel>	
+	
+	
+	
+    </Grid>
+</Window>        
+   
+
+    

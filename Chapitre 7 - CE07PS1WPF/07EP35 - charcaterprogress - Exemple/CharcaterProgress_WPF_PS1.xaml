@@ -1,0 +1,128 @@
+<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:progressControls="clr-namespace:CharacterProgressControl.WPF;assembly=CharacterProgressControl"
+        Title="Chapitre 7 - CharacterPogress"
+        Background="#FF1D1D1D"
+        Height="600"
+        Width="800">
+    <Grid>
+   
+	<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+		<StackPanel Orientation="Vertical" > 
+			<Label Content="ManType1" FontSize="14" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center"/>
+			<progressControls:CProgressControl 
+			Name="ProgressBar"
+			Minimum="0"
+			Maximum="100"
+			BorderBrush="#FFA20025"
+			Foreground="#FFD80073"
+			Background="#FF1D1D1D"
+			DisplayOption="ManType1"
+			TextForeground="White"
+			Width="100"
+			Height="270"
+			Value="{Binding ElementName=SManType1, Path=Value}" 
+			Margin="8"
+			/>
+			<Slider Name="SManType1" Width="120" Margin="10 5 0 0"  LargeChange="10" Maximum="100" Minimum="0" Orientation="Horizontal" SmallChange="1"  Value="65" />
+		</StackPanel> 
+
+		<StackPanel Orientation="Vertical" HorizontalAlignment="Center"> 
+			<Label Content="WomanType1" FontSize="14" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center"/>
+			<progressControls:CProgressControl 
+			Name="Progress2"
+			Minimum="0"
+			Maximum="100"
+			BorderBrush="#FF004A00"
+			Foreground="#FF78BA00"
+			Background="#FF1D1D1D"
+			DisplayOption="WomanType1"
+			TextForeground="White"
+			Width="100"
+			Height="270"
+			Value="{Binding ElementName=SWomanType1, Path=Value}" 
+			Margin="8"/>
+			<Slider Name="SWomanType1" Width="120" Margin="10 5 0 0"  LargeChange="10" Maximum="100" Minimum="0" Orientation="Horizontal" SmallChange="1"  Value="09" />
+
+		</StackPanel>
+
+		<StackPanel Orientation="Vertical"> 
+			<Label Content="ManType2" FontSize="14" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center"/>
+			<progressControls:CProgressControl 
+			Name="Progress3"
+			Minimum="0"
+			Maximum="100"
+			BorderBrush="#FF1B58B8"
+			Foreground="#FF1FAEFF"
+			Background="#FF1D1D1D"
+			DisplayOption="ManType2"
+			TextForeground="White"
+			Width="100"
+			Height="270"
+			Value="{Binding ElementName=SManType2, Path=Value}" 
+			Margin="8" />
+		<Slider Name="SManType2" Width="120" Margin="10 5 0 0"  LargeChange="10" Maximum="100" Minimum="0" Orientation="Horizontal" SmallChange="1"  Value="54" />
+
+		</StackPanel>
+
+		<StackPanel Orientation="Vertical"> 
+			<Label Content="WomanType2" FontSize="14" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center"/>
+			<progressControls:CProgressControl 
+			Name="Progress4"
+			Minimum="0"
+			Maximum="100"
+			BorderBrush="#FF632F00"
+			Foreground="#FFF4B300"
+			Background="#FF1D1D1D"
+			DisplayOption="WomanType2"
+			TextForeground="White"
+			Width="100"
+			Height="270"
+			Value="{Binding ElementName=SWomanType2, Path=Value}" 
+			Margin="8" />
+			<Slider Name="SWomanType2" Width="120" Margin="10 5 0 0"  LargeChange="10" Maximum="100" Minimum="0" Orientation="Horizontal" SmallChange="1"  Value="14" />
+
+		</StackPanel>
+
+		<StackPanel Orientation="Vertical"> 
+			<Label Content="ManType3" FontSize="14" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center"/>
+			<progressControls:CProgressControl 
+			Name="Progress5"
+			Minimum="0"
+			Maximum="100"
+			BorderBrush="#FF7200AC"
+			Foreground="#FFAA40FF"
+			Background="#FF1D1D1D"
+			DisplayOption="ManType3"
+			TextForeground="White"
+			Width="100"
+			Height="270"
+			Value="{Binding ElementName=SManType3, Path=Value}" 
+			Margin="8" />
+			<Slider Name="SManType3" Width="120" Margin="10 5 0 0"  LargeChange="10" Maximum="100" Minimum="0" Orientation="Horizontal" SmallChange="1"  Value="49" />
+
+		</StackPanel>
+
+		<StackPanel Orientation="Vertical"> 
+			<Label Content="WomanType3" FontSize="14" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+			<progressControls:CProgressControl 
+			Name="Progress6"
+			Minimum="0"
+			Maximum="100"
+			BorderBrush="#FFB81B1B"
+			Foreground="#FFFF2E12"
+			Background="#FF1D1D1D"
+			DisplayOption="WomanType3"
+			TextForeground="White"
+			Width="100"
+			Height="270"
+			Value="{Binding ElementName=SWomanType3, Path=Value}" 
+			Margin="8" />
+      		<Slider Name="SWomanType3" Width="120" Margin="10 5 0 0"  LargeChange="10" Maximum="100" Minimum="0" Orientation="Horizontal" SmallChange="1"  Value="65" />
+
+		</StackPanel>
+	</StackPanel>
+        
+    </Grid>
+</Window>

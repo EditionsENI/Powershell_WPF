@@ -1,0 +1,38 @@
+<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"		
+        Title="Chapitre 5 - ComboBox" 
+        Width="320" 
+        Height="280"  
+		BorderBrush="DodgerBlue"
+		>
+
+    <Grid>		
+<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+    <ComboBox Name="ComboBox1" Margin="10">
+            <ComboBoxItem>Damien</ComboBoxItem>
+            <ComboBoxItem >Jérôme</ComboBoxItem>
+            <ComboBoxItem>Kévin</ComboBoxItem>
+        </ComboBox>
+    
+    <ComboBox Name="ComboBox" Margin="10">
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="icons/ordi.png" Width="12" Height="12" Margin="0 0 5 0" />
+                    <TextBlock>Ordinateurs</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="icons/user.png" Width="12" Height="12" Margin="0 0 5 0" />
+                    <TextBlock>Utilisateurs</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
+
+</StackPanel>
+
+    </Grid>
+</Window>        

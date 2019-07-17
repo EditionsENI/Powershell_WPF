@@ -1,0 +1,53 @@
+﻿<Controls:MetroWindow 
+xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"	
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" 
+Title="Chapitre 11 - FlipView" 
+Height="250" Width="380" 
+ResizeMode="NoResize"
+BorderBrush="DodgerBlue"
+BorderThickness="0.5"
+>
+		
+		
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Cobalt.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>		
+
+		
+		
+    <Grid Background="white">       
+	<StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center">
+<Controls:FlipView Name="FlipView"
+Foreground="{DynamicResource WhiteBrush}"
+Height="200" Width="360"
+BorderThickness="1" BorderBrush="CornFlowerBlue">
+<Controls:FlipView.Items>
+	<Grid Background="#2E8DEF">
+		<iconPacks:PackIconModern Width="90"
+		Height="90"
+		HorizontalAlignment="Center"
+		VerticalAlignment="Center"
+		Kind="Monitor" />	
+	</Grid>
+	<Grid Background="#00A600">										
+		<iconPacks:PackIconModern Width="90"
+		Height="90"
+		HorizontalAlignment="Center"
+		VerticalAlignment="Center"
+		Kind="Pie" />	
+	</Grid>
+</Controls:FlipView.Items>
+</Controls:FlipView>			
+	</StackPanel>        
+    </Grid>
+</Controls:MetroWindow>        

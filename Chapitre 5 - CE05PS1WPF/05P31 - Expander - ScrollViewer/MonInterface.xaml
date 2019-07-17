@@ -1,0 +1,72 @@
+<Window 
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+Title="Chapitre 5 -Expander" Width="380" Height="200">
+
+
+
+<Grid>	
+
+
+
+
+
+
+
+
+<Expander Name="MonExpander" Header="Mon Expander" IsExpanded="True">  
+	<ScrollViewer CanContentScroll="false" Height="100"> 
+		<StackPanel Orientation="Vertical">	
+		<StackPanel Orientation="Horizontal" Margin="0,5,0,0" HorizontalAlignment="Center">
+		<Button x:Name="MonBouton" Content="Bouton 1" Width="80" Height="20"></Button>
+		<TextBox x:Name="MonTextBox" Width="100" Height="20"/>
+		</StackPanel>	
+
+		<StackPanel Orientation="Horizontal" Margin="0,5,0,0" HorizontalAlignment="Center">
+		<Button x:Name="MonBouton2" Content="Bouton 2" Width="80" Height="20"></Button>
+		<TextBox x:Name="MonTextBox2" Width="100" Height="20"/>
+		</StackPanel>		
+
+		<StackPanel Orientation="Horizontal" Margin="0,5,0,0" HorizontalAlignment="Center">
+		<Button x:Name="MonBouton3" Content="Bouton 3" Width="80" Height="20"></Button>
+		<TextBox x:Name="MonTextBox3" Width="100" Height="20"/>
+		</StackPanel>	
+
+		<StackPanel Orientation="Horizontal" Margin="0,5,0,0" HorizontalAlignment="Center">
+		<Button x:Name="MonBouton4" Content="Bouton 4" Width="80" Height="20"></Button>
+		<TextBox x:Name="MonTextBox4" Width="100" Height="20"/>
+		</StackPanel>
+		
+		<StackPanel Orientation="Horizontal" Margin="0,5,0,0" HorizontalAlignment="Center">
+		<Button x:Name="MonBouton5" Content="Bouton 5" Width="80" Height="20"></Button>
+		<TextBox x:Name="MonTextBox5" Width="100" Height="20"/>
+		</StackPanel>
+
+		<StackPanel Orientation="Horizontal" Margin="0,5,0,0" HorizontalAlignment="Center">
+		<Button x:Name="MonBouton6" Content="Bouton 6" Width="80" Height="20"></Button>
+		<TextBox x:Name="MonTextBox6" Width="100" Height="20"/>
+		</StackPanel>
+		</StackPanel>		
+	</ScrollViewer> 										
+</Expander> 
+
+
+
+
+
+
+
+
+
+
+	
+</Grid>
+</Window>        
+
+
+
+
+
+   
+
+    

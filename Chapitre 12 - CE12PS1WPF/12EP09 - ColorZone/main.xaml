@@ -1,0 +1,124 @@
+<Window 
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                      Title="Application ColorZones"
+                      Height="720"
+                      Width="550"
+                      WindowStartupLocation="CenterScreen" 
+                      BorderBrush="Blue" 
+                      BorderThickness="1"
+                      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+                      TextElement.FontWeight="Regular"
+                      TextElement.FontSize="13"
+                      TextOptions.TextFormattingMode="Ideal"
+                      TextOptions.TextRenderingMode="Auto"
+                      Background="{DynamicResource MaterialDesignPaper}"
+                      FontFamily="{DynamicResource MaterialDesignFont}"
+                      ResizeMode="CanResize">
+
+<Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+
+ <Grid>
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+        <materialDesign:Card Padding="8" Margin="8" Width="400">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">ColorZone N°1 mode Standard</TextBlock>
+        </materialDesign:Card>
+        <StackPanel HorizontalAlignment="Center">
+            <materialDesign:ColorZone Margin="3" Padding="3" Width="150">
+                <StackPanel>
+                    <TextBlock Margin="20,0,0,0"> Color Zone Standard</TextBlock>
+                </StackPanel>
+            </materialDesign:ColorZone>
+         </StackPanel>  
+
+         <materialDesign:Card Padding="8" Margin="8" Width="400">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">ColorZone N°2 mode Accent</TextBlock>
+        </materialDesign:Card>
+        <StackPanel HorizontalAlignment="Center">
+            <materialDesign:ColorZone Mode="Accent" Margin="3" Padding="3" Width="150">
+                <StackPanel>
+                    <TextBlock Margin="20,0,0,0"> Color Zone Accent</TextBlock>
+                </StackPanel>
+            </materialDesign:ColorZone>
+         </StackPanel>  
+
+         <materialDesign:Card Padding="8" Margin="8" Width="400">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">ColorZone N°3 mode Dark</TextBlock>
+        </materialDesign:Card>
+        <StackPanel HorizontalAlignment="Center">
+            <materialDesign:ColorZone Mode="Dark" Margin="3" Padding="3" Width="150">
+                <StackPanel>
+                    <TextBlock Margin="20,0,0,0"> Color Zone Accent</TextBlock>
+                </StackPanel>
+            </materialDesign:ColorZone>
+         </StackPanel>  
+
+         <materialDesign:Card Padding="8" Margin="8" Width="400">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">ColorZone N°4 mode Light</TextBlock>
+        </materialDesign:Card>
+        <StackPanel HorizontalAlignment="Center">
+            <materialDesign:ColorZone Mode="Light" Margin="3" Padding="3" Width="150">
+                <StackPanel>
+                    <TextBlock Margin="20,0,0,0"> Color Zone Accent</TextBlock>
+                </StackPanel>
+            </materialDesign:ColorZone>
+         </StackPanel>
+
+        <materialDesign:Card Padding="8" Margin="8" Width="400">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">ColorZone N°5 mode PrimaryDark</TextBlock>
+        </materialDesign:Card>
+        <StackPanel HorizontalAlignment="Center">
+            <materialDesign:ColorZone Mode="PrimaryDark" Margin="3" Padding="3" Width="150">
+                <StackPanel>
+                    <TextBlock Margin="20,0,0,0"> Color Zone Accent</TextBlock>
+                </StackPanel>
+            </materialDesign:ColorZone>
+         </StackPanel>
+
+         <materialDesign:Card Padding="8" Margin="8" Width="400">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">ColorZone N°6 mode PrimaryLight</TextBlock>
+        </materialDesign:Card>
+        <StackPanel HorizontalAlignment="Center">
+            <materialDesign:ColorZone Mode="PrimaryLight" Margin="3" Padding="3" Width="150">
+                <StackPanel>
+                    <TextBlock Margin="20,0,0,0"> Color Zone Accent</TextBlock>
+                </StackPanel>
+            </materialDesign:ColorZone>
+         </StackPanel>
+
+                 <materialDesign:Card Padding="8" Margin="8" Width="400">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">ColorZone N°7 mode PrimaryMid</TextBlock>
+        </materialDesign:Card>
+        <StackPanel HorizontalAlignment="Center">
+            <materialDesign:ColorZone Mode="PrimaryMid" Margin="3" Padding="3" Width="150">
+                <StackPanel>
+                    <TextBlock Margin="20,0,0,0"> Color Zone Accent</TextBlock>
+                </StackPanel>
+            </materialDesign:ColorZone>
+         </StackPanel>
+
+                 <materialDesign:Card Padding="8" Margin="8" Width="400">
+            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">ColorZone N°8 mode Inverted</TextBlock>
+        </materialDesign:Card>
+        <StackPanel HorizontalAlignment="Center">
+            <materialDesign:ColorZone Mode="Inverted" Margin="3" Padding="3" Width="150">
+                <StackPanel>
+                    <TextBlock Margin="20,0,0,0"> Color Zone Accent</TextBlock>
+                </StackPanel>
+            </materialDesign:ColorZone>
+         </StackPanel>
+
+    </StackPanel>
+</Grid>
+</Window>

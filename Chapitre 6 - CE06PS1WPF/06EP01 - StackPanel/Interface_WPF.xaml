@@ -1,0 +1,33 @@
+<Window 
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+Title="Chapitre 6 - StackPanel" 
+Width="400" Height="180"
+>
+
+<Grid>	
+<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+<StackPanel Name="Intitule" Orientation="Vertical">
+<Label Foreground="Blue" FontWeight="Bold" Content="Nom d'ordinateur"/>
+<Label Foreground="Blue" FontWeight="Bold" Content="Utilisateur"/>
+<Label Foreground="Blue" FontWeight="Bold" Content="Ville"/>
+<Label Foreground="Blue" FontWeight="Bold" Content="Mail"/>
+</StackPanel>
+
+<StackPanel Name="Resultat" Orientation="Vertical">
+<Label Margin="10,0,0,0" Content="PCDeDamien"/>
+<Label Margin="10,0,0,0" Content="Damien"/>
+<Label Margin="10,0,0,0" Content="Paris"/>
+<Label Margin="10,0,0,0" Content="damien.vanrobaeys@toto.com"/>
+</StackPanel>
+</StackPanel>
+
+
+	
+	
+	
+</Grid>
+</Window>        
+   
+
+    

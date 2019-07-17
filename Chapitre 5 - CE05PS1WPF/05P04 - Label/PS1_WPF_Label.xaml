@@ -1,0 +1,23 @@
+<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"		
+        Title="Chapitre 5 - Label" 
+        Width="450" 
+        Height="270"  
+		ResizeMode="NoResize"	
+		BorderBrush="DodgerBlue"
+		>
+
+    <Grid>		
+       <StackPanel Name="SP_Principal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Margin="16" Name="Label" Content="PowerShell et WPF" />
+            <Button Name="Button" Width="100" Height="40">Button N°1</Button>
+        </StackPanel>
+
+    </Grid>
+</Window>        
+   
+    
+    
+    

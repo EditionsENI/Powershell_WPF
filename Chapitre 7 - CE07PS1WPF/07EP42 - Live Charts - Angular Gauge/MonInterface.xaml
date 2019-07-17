@@ -1,0 +1,39 @@
+<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"	
+        xmlns:local="clr-namespace:Wpf.Gauges"
+    	xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"        
+		Title="Chapitre 7 - LiveCharts.WPF" 
+        Width="400" 
+        Height="400"  
+		ResizeMode="CanResize"	
+		>
+              
+    <Grid>
+     <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+       <Slider Name="Slider" Width="120" Margin="10 5 0 0"  AutoToolTipPlacement="TopLeft" LargeChange="10" Maximum="250" Minimum="50" Orientation="Horizontal" SmallChange="1"  Value="60" />
+        
+        <lvc:AngularGauge Grid.Row="1" Value="{Binding ElementName=Slider, Path=Value}" FromValue="50" ToValue="250" 
+                          LabelsStep="50" TicksStep="25" Wedge="300"
+                          TicksForeground="White" Foreground="White" 
+                          FontWeight="Bold" FontSize="16"
+                          SectionsInnerRadius="0.65">
+            <lvc:AngularGauge.Sections>
+                <lvc:AngularSection FromValue="50" ToValue="100" Fill="#FF23BA08"/>
+                <lvc:AngularSection FromValue="100" ToValue="200" Fill="#F8A725"/>
+                <lvc:AngularSection FromValue="200" ToValue="250" Fill="#FF3939"/>
+            </lvc:AngularGauge.Sections>
+        </lvc:AngularGauge>
+    </Grid>
+	</Window>     
+
+
+   
+   
+    
+    
+    

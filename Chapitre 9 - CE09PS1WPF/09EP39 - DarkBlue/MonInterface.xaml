@@ -1,0 +1,106 @@
+<modern:ModernWindow 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"	
+        xmlns:modern="clr-namespace:ModernChrome;assembly=ModernChrome"		
+        Title="Chapitre 7 - Les thèmes" 
+        Width="370" 
+        Height="400"  
+		ResizeMode="CanResize"	
+		>
+		
+    <modern:ModernWindow.CaptionIcon>
+        <Path UseLayoutRounding="True" SnapsToDevicePixels="True" Stretch="UniformToFill"
+              Fill="{Binding Path=(TextBlock.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ContentPresenter}}}"
+              Data="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+    </modern:ModernWindow.CaptionIcon>		
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Themes Available: Blend, Dark, DarkBlue, Generic, Light, LightBlue, Themes -->
+                <!-- <ResourceDictionary Source="pack://application:,,,/ModernChrome;component/Themes/Dark.xaml" /> -->
+                <!-- <ResourceDictionary Source="pack://application:,,,/ModernChrome;component/Themes/Blend.xaml" /> -->
+                <ResourceDictionary Source="pack://application:,,,/ModernChrome;component/Themes/DarkBlue.xaml" />
+                <!-- <ResourceDictionary Source="pack://application:,,,/ModernChrome;component/Themes/Generic.xaml" /> -->
+                <!-- <ResourceDictionary Source="pack://application:,,,/ModernChrome;component/Themes/Light.xaml" /> -->
+                <!-- <ResourceDictionary Source="pack://application:,,,/ModernChrome;component/Themes/LightBlue.xaml" /> -->
+                <!-- <ResourceDictionary Source="pack://application:,,,/ModernChrome;component/Themes/Themes.xaml" /> -->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <modern:ModernWindow.StatusBar>
+        <TextBlock Name="StatusBar" HorizontalAlignment="Center" VerticalAlignment="Center">Theme DarkBlue</TextBlock>
+    </modern:ModernWindow.StatusBar>
+
+       <Grid>
+<StackPanel Name="SP_Principal" HorizontalAlignment="Center" VerticalAlignment="Center">
+	<StackPanel Name="SP_Contenu" Orientation="Vertical">
+	
+	
+	
+		<StackPanel Name="SP_Tabs">
+			<GroupBox Foreground="White" Header="Qui êtes-vous ?" Height="60" BorderBrush="CornFlowerBlue" Width="320" >		
+				<StackPanel Orientation="Horizontal">
+					<Label Foreground="White" Content="Utilisateur" Width="80" Height="25"/>
+					<ComboBox x:Name="Choose_User" SelectedIndex="0" Text="Choose" Height="25" Width="220" Margin="0,0,0,0">                 									
+						<ComboBoxItem Content="Damien"></ComboBoxItem>					
+						<ComboBoxItem Content="Jérôme"></ComboBoxItem>		
+						<ComboBoxItem Content="Julie"></ComboBoxItem>																			
+					</ComboBox>    
+				</StackPanel>				
+			</GroupBox>					
+		</StackPanel>	
+	
+		<StackPanel Name="SP_Tabss" Margin="0,5,0,0">
+			<GroupBox Foreground="White" Header="Vos infos" Height="60" BorderBrush="CornFlowerBlue" Width="320" >	
+				<StackPanel Orientation="Horizontal">			
+					<Label Foreground="White" Content="Mail" Margin="0,0,0,0" Height="23"  Width="80"></Label>
+					<TextBox Margin="0,0,0,0" Width="220" Height="23"></TextBox>	
+				</StackPanel>								
+			</GroupBox>					
+		</StackPanel>		
+	
+	
+		<StackPanel Name="SP_Tab" Margin="0,5,0,0">
+			<GroupBox Foreground="White" Header="Données" Height="160" BorderBrush="CornFlowerBlue" Width="320" >		
+				<TabControl x:Name="TabControl" Height="130" Width="300" Margin="0,5,0,5">		
+					<TabItem Header="Machines">
+						<DataGrid SelectionMode="Extended"  AutoGenerateColumns="True" Name="DataGrid_Machines"  ItemsSource="{Binding}"  Margin="2,2,2,2" >
+							<DataGrid.Columns>				
+								<DataGridTextColumn Header="Nom"  Binding="{Binding Nom}"/>																			
+								<DataGridTextColumn Header="Ville"  Binding="{Binding Localisation}"/>	
+								<DataGridTextColumn Header="OS" Width="*" Binding="{Binding OS}"/>
+							</DataGrid.Columns>
+						</DataGrid>				
+					</TabItem>			
+							
+					<TabItem Header="Utilisateurs">
+						<DataGrid SelectionMode="Extended"  Name="DataGrid_Utilisateurs"  ItemsSource="{Binding}"  Margin="2,2,2,2" >
+							<DataGrid.Columns>				
+								<DataGridTextColumn Header="Nom" Binding="{Binding Nom}"/>																			
+								<DataGridTextColumn Header="Ville" Binding="{Binding Localisation}"/>	
+							</DataGrid.Columns>
+						</DataGrid>				
+					</TabItem>			
+				</TabControl>	
+			</GroupBox>					
+		</StackPanel>
+		<StackPanel Name="SP_Buttons" Orientation="Horizontal" Margin="0,5,0,0">
+			<Button Name="BTN_Redemarrer" Content="Redemarrer" Width="157"/>
+			<Button Name="BTN_Eteindre" Content="Eteindre" Width="157" Margin="6,0,0,0"/>			
+		</StackPanel>
+	</StackPanel>
+</StackPanel>
+
+
+        </Grid>
+
+</modern:ModernWindow>
+
+   
+   
+    
+    
+    

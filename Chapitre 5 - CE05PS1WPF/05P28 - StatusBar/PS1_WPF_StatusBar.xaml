@@ -1,0 +1,28 @@
+<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"		
+        Title="Chapitre 5 - Barre de status" 
+        Width="450" 
+        Height="270"  
+		ResizeMode="NoResize"	
+		BorderBrush="DodgerBlue"
+		>
+
+
+    <Grid>	
+<DockPanel>	
+<StatusBar DockPanel.Dock="Bottom" Name="statusBar" Background="Gray">
+	<DockPanel Width="{Binding ActualWidth, ElementName=statusBar, Mode=OneWay}">
+		<Label  Foreground="White" Content="ENI - PowerShell et WPF" HorizontalContentAlignment="Center"/>
+	</DockPanel>
+</StatusBar>		
+<Menu DockPanel.Dock="Top"></Menu> 
+</DockPanel>	
+		
+    </Grid>
+</Window>        
+   
+    
+    
+    

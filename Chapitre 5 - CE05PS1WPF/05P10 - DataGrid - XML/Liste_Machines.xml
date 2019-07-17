@@ -1,0 +1,37 @@
+<Computers>
+	<Computer>
+		<Name>PCDJEROME1</Name>
+		<Status>Succes</Status>
+		<Ville>LYON</Ville>
+	</Computer>
+
+	<Computer>
+		<Name>PCDAMIEN1</Name>
+		<Status>Echec</Status>
+		<Ville>PARIS</Ville>		
+	</Computer>
+
+	<Computer>
+		<Name>PCDAMIEN2</Name>
+		<Status>En cours</Status>
+		<Ville>PARIS</Ville>		
+	</Computer>
+
+	<Computer>
+		<Name>PCDJEROME2</Name>
+		<Status>Echec</Status>
+		<Ville>LYON</Ville>		
+	</Computer>
+
+	<Computer>
+		<Name>PCDJEROME3</Name>
+		<Status>Succes</Status>
+		<Ville>LYON</Ville>		
+	</Computer>
+
+	<Computer>
+		<Name>PCDAMIEN3</Name>
+		<Status>Succes</Status>
+		<Ville>PARIS</Ville>		
+	</Computer>	
+</Computers>
